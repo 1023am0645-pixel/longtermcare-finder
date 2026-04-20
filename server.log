@@ -1,0 +1,21 @@
+::ffff:192.168.219.117 - - [14/Apr/2026 23:16:12] "GET / HTTP/1.1" 304 -
+::ffff:192.168.219.117 - - [14/Apr/2026 23:16:12] "GET /style.css HTTP/1.1" 304 -
+::ffff:192.168.219.117 - - [14/Apr/2026 23:16:12] "GET /app.js HTTP/1.1" 304 -
+::ffff:192.168.219.117 - - [14/Apr/2026 23:16:12] code 404, message File not found
+::ffff:192.168.219.117 - - [14/Apr/2026 23:16:12] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [14/Apr/2026 23:19:13] "GET / HTTP/1.1" 200 -
+::1 - - [14/Apr/2026 23:24:58] code 404, message File not found
+::1 - - [14/Apr/2026 23:24:58] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [14/Apr/2026 23:25:16] "GET / HTTP/1.1" 200 -
+::1 - - [14/Apr/2026 23:25:17] "GET /app.js HTTP/1.1" 200 -
+::1 - - [14/Apr/2026 23:25:17] "GET /style.css HTTP/1.1" 200 -
+::ffff:192.168.219.117 - - [14/Apr/2026 23:56:13] "GET / HTTP/1.1" 304 -
+::ffff:192.168.219.117 - - [14/Apr/2026 23:56:13] "GET /style.css HTTP/1.1" 304 -
+::ffff:192.168.219.117 - - [14/Apr/2026 23:56:13] "GET /app.js HTTP/1.1" 304 -
+n3.framework/Versions/3.9/lib/python3.9/http/server.py", line 1295, in server_bind
+    return super().server_bind()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 48] Address already in use

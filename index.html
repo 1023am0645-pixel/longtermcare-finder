@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장기요양기관 찾기 | 국민건강보험</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo" id="go-home">
+                    <span>노인장기요양보험 <strong>기관찾기</strong></span>
+                </div>
+                <!-- Navigation links removed -->
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- VIEW 1: Category Selection -->
+            <section id="view-home" class="view-section active">
+                <div class="home-hero">
+                    <h1>장기요양 기관찾기</h1>
+                    <p>원하시는 장기요양 급여종류를 선택하세요.</p>
+                </div>
+                
+                <div class="category-grid">
+                    <button class="category-btn" data-category="방문요양">
+                        <i class="fa-solid fa-house-user"></i>
+                        <span>방문요양</span>
+                    </button>
+                    <button class="category-btn" data-category="방문목욕">
+                        <i class="fa-solid fa-bath"></i>
+                        <span>방문목욕</span>
+                    </button>
+                    <button class="category-btn" data-category="방문간호">
+                        <i class="fa-solid fa-user-nurse"></i>
+                        <span>방문간호</span>
+                    </button>
+                    <button class="category-btn" data-category="주야간보호">
+                        <i class="fa-solid fa-sun"></i>
+                        <span>주야간보호</span>
+                    </button>
+                    <button class="category-btn" data-category="단기보호">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>단기보호</span>
+                    </button>
+                    <button class="category-btn" data-category="요양시설">
+                        <i class="fa-solid fa-hospital"></i>
+                        <span>요양시설</span>
+                    </button>
+                    <button class="category-btn" data-category="복지용구">
+                        <i class="fa-solid fa-wheelchair"></i>
+                        <span>복지용구</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- VIEW 2: Search & Results -->
+            <section id="view-search" class="view-section">
+                <div class="search-header">
+                    <button class="back-btn" id="btn-back">
+                        <i class="fa-solid fa-arrow-left"></i> 뒤로가기
+                    </button>
+                    <h2 id="selected-category-title">방문요양 기관 찾기</h2>
+                </div>
+
+                <div class="search-panel">
+                    <form id="search-form" class="search-form">
+                        <div class="form-group location-group">
+                            <i class="fa-solid fa-location-dot input-icon"></i>
+                            <select id="sido" class="select-input">
+                                <option value="전체">시/도 전체</option>
+                                <option value="서울">서울특별시</option>
+                                <option value="부산">부산광역시</option>
+                                <option value="대구">대구광역시</option>
+                                <option value="인천">인천광역시</option>
+                                <option value="광주">광주광역시</option>
+                                <option value="대전">대전광역시</option>
+                                <option value="울산">울산광역시</option>
+                                <option value="세종">세종특별자치시</option>
+                                <option value="경기">경기도</option>
+                                <option value="강원">강원특별자치도</option>
+                                <option value="충북">충청북도</option>
+                                <option value="충남">충청남도</option>
+                                <option value="전북">전북특별자치도</option>
+                                <option value="전남">전라남도</option>
+                                <option value="경북">경상북도</option>
+                                <option value="경남">경상남도</option>
+                                <option value="제주">제주특별자치도</option>
+                            </select>
+                            <select id="sigungu" class="select-input">
+                                <option value="전체">시/군/구 전체</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group keyword-group">
+                            <i class="fa-solid fa-magnifying-glass input-icon"></i>
+                            <input type="text" id="keyword" class="text-input" placeholder="기관명 등 검색어를 입력하세요">
+                        </div>
+                        
+                        <button type="submit" class="search-submit-btn">
+                            <i class="fa-solid fa-search"></i> 검색
+                        </button>
+                    </form>
+                </div>
+
+                <div class="results-container">
+                    <div class="results-header">
+                        <h3>검색 결과 <span id="result-count" class="highlight-text">0</span>건</h3>
+                    </div>
+                    <div id="results-grid" class="results-grid">
+                        <!-- Cards injected via JS -->
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2026 국민건강보험공단 장기요양기관 시뮬레이션 웹</p>
+            </div>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
